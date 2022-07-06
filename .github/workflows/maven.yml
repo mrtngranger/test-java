@@ -28,7 +28,7 @@ jobs:
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: springboot-image-test@sha256:582b4bccb1f99f6521825bc7d0ae335035a1aa0520d4ddd8b7d43b09882fb4c5
+        image: mrtngrangerhg/springboot-image-test@sha256:582b4bccb1f99f6521825bc7d0ae335035a1aa0520d4ddd8b7d43b09882fb4c5 # ratchet:ubuntu:latest
         tags: v1, latest
         registry: docker.io
         dockerfile: Dockerfile
