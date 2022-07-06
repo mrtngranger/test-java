@@ -38,7 +38,7 @@ jobs:
     - name: ratchet
       uses: docker://ghcr.io/sethvargo/ratchet:0.2.3
       with:
-        args: "pin .github/workflows/maven.yml"
+        args: "./ratchet check .github/workflows/maven.yml"
   # ratchet:
   #   runs-on: ubuntu-latest
   #   name: ratchet
