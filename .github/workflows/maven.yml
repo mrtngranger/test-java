@@ -34,13 +34,18 @@ jobs:
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-  ratchet:
-    runs-on: ubuntu-latest
-    name: ratchet
-    steps:
-    # - name: ratchet
-    #   uses: ratchet:actions/checkout@v3
 
-    - uses: docker://ghcr.io/sethvargo/ratchet:0.2.3
+    - name: ratchet
+      uses: docker://ghcr.io/sethvargo/ratchet:0.2.3
       with:
         args: "pin .github/workflows/maven.yml"
+  # ratchet:
+  #   runs-on: ubuntu-latest
+  #   name: ratchet
+  #   steps:
+  #   # - name: ratchet
+  #   #   uses: ratchet:actions/checkout@v3
+
+  #   - uses: docker://ghcr.io/sethvargo/ratchet:0.2.3
+  #     with:
+  #       args: "pin .github/workflows/maven.yml"
