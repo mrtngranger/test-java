@@ -36,11 +36,11 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
   ratchet:
     runs-on: ubuntu-latest
-
+    name: ratchet
     steps:
-    - name: ratchet
-      uses: ratchet:actions/checkout@v3
+    # - name: ratchet
+    #   uses: ratchet:actions/checkout@v3
 
-      # uses: docker://ghcr.io/sethvargo/ratchet:0.2.3
-      # with:
-      #   args: "pin .github/workflows/maven.yml"
+    - uses: docker://ghcr.io/sethvargo/ratchet:0.2.3
+      with:
+        args: "pin .github/workflows/maven.yml"
