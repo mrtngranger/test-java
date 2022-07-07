@@ -43,6 +43,19 @@ jobs:
       uses: docker://ghcr.io/sethvargo/ratchet:0.2.3
       with:
         args: "check .github/workflows/maven.yml"
+
+    - name: Versioning
+      with:
+        tag_prefix: "v"
+        major_pattern: "(MAJOR)"
+        minor_pattern: "(MINOR)"
+        format: "${major}.${minor}.${patch}-$prereleases${increment}"
+        change_path: "src"
+        namespace: demoapp
+        bump_each_commit: false
+        search_commit_body: false
+        user_format_type: "json"
+
   # ratchet:
   #   runs-on: ubuntu-latest
   #   name: ratchet
