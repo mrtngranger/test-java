@@ -45,6 +45,7 @@ jobs:
         args: "check .github/workflows/maven.yml"
 
     - name: Versioning
+      uses: paulhatch/semantic-version@v4.0.2
       with:
         tag_prefix: "v"
         major_pattern: "(MAJOR)"
