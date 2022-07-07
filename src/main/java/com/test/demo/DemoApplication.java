@@ -9,7 +9,7 @@ public class DemoApplication {
 
 	@GetMapping("/welcome")
 	public String welcome() {
-		return "Welcome to Java!";
+		return "Welcome to the Java!";
 	}
 
 	public static void main(String[] args) {
